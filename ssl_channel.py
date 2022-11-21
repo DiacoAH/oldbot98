@@ -32,5 +32,3 @@ if __name__ == '__main__':
     a = ssl.apply(30, 50, 50)
     print(a)
     
-    
-    
