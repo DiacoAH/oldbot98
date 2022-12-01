@@ -48,7 +48,7 @@ class Collector():
             dataframe.reset_index(inplace=True)
             dataframe.drop(columns=['index','symbol','interval','volume','turnover','period','id','start_at'],inplace=True)
             dataframe.drop(index=dataframe.index[-1],inplace=True,axis=1)
-            dataframe.to_csv(f"{self.dataFolder}/{self.filename}{interval}", index=False , line_terminator='\n')
+            dataframe.to_csv(f"{self.dataFolder}/{self.filename}{interval}", index=False , lineterminator='\n')
             print(f"created new file : {self.dataFolder}/{self.filename}{interval}")
         else :
             
@@ -79,7 +79,7 @@ class Collector():
                 df.drop(index=df.index[-1],inplace=True,axis=1)
                 length = len(df.index)
                 with open(f"{self.dataFolder}/{self.filename}{interval}" , 'a') as file:
-                    df.to_csv(file , header=False , index=False ,line_terminator='\n')   
+                    df.to_csv(file , header=False , index=False ,lineterminator='\n')   
             print(f"{length} new data added to file :{self.dataFolder}/{self.filename}{interval}")
             
             

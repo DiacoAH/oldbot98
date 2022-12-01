@@ -6,7 +6,7 @@ from time import sleep
 
 dataFolder = "Data"
 filename = "dataFile"
-interval = 5
+interval = 30
 filepath = f"{dataFolder}/{filename}{interval}"
 
 data = Data.Collector()
