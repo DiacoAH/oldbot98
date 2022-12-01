@@ -32,6 +32,7 @@ def run():
     authedUsers = [163552356 , 5449566206]
     t1 = threading.Thread(target=main)
     t1.start()
+    breakpoint()
 def send(text):
 
     for user in authedUsers :
